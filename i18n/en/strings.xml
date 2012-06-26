@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="app_name">TiCustomMenu</string>
+
+    <!-- Window One Text -->
+    <string name="oneLabel">Window One</string>
+
+    <!-- Window Two Text -->
+    <string name="twoLabel">Window Two</string>
+
+    <!-- Window Three Text -->
+    <string name="threeLabel">Window Three</string>
+
+    <!-- Window Four Text -->
+    <string name="fourLabel">Window Four</string>
+
+    <!-- Window Five Text -->
+    <string name="fiveLabel">Window Five</string>
+
+    <!-- Button text -->
+    <string name="butt_continue">Continue</string>
+    <string name="butt_close">Close</string>
+
+    <!-- Menu Bar Text -->
+    <string name="menuItemOne">One</string>
+    <string name="menuItemTwo">Two</string>
+    <string name="menuItemThree">Three</string>
+    <string name="menuItemFour">Four</string>
+    <string name="menuItemFive">Five</string>
+
+    <!-- Error Messages -->
+    <string name="E0001">Error 1</string>
+
+</resources>

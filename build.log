@@ -1,0 +1,97 @@
+Logfile initialized
+[INFO] logfile = /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build.log
+[DEBUG] /Library/Application Support/Titanium/mobilesdk/osx/2.0.1.CR1/android/builder.py simulator TiCustomMenu /Users/thewarpedcoder/android-sdk-mac_x86 /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu com.thewarpedcoder.TiCustomMenu 12 HVGA 
+[INFO] Building TiCustomMenu for Android ... one moment
+[INFO] Titanium SDK version: 2.0.1 (04/10/12 13:17 0234887)
+[DEBUG] Waiting for device to be ready ...
+[TRACE] adb devices returned 2 devices/emulators
+[TRACE] adb devices returned 2 devices/emulators
+[TRACE] adb devices returned 2 devices/emulators
+[TRACE] adb devices returned 2 devices/emulators
+[TRACE] adb devices returned 2 devices/emulators
+[TRACE] adb devices returned 2 devices/emulators
+[DEBUG] Device connected... (waited 25 seconds)
+[DEBUG] waited 25.089205 seconds on emulator to get ready
+[INFO] Waiting for the Android Emulator to become available
+[DEBUG] com.thewarpedcoder.TiCustomMenu installed? True
+[INFO] Fastdev server running, deploying in Fastdev mode
+[INFO] Copying CommonJS modules...
+[INFO] Copying project resources..
+[INFO] Detected change in tiapp.xml, or assets deleted. Forcing full re-build...
+[TRACE] COPYING CREATED FILE: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/Resources/android/default.png => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/default.png
+[TRACE] COPYING CREATED FILE: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/Resources/android/TiCm_icon.png => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/TiCm_icon.png
+[TRACE] COPYING CREATED FILE: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/Resources/app.js => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/app.js
+[TRACE] COPYING CREATED FILE: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/Resources/control/controller.js => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/control/controller.js
+[TRACE] COPYING CREATED FILE: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/Resources/iTunesArtwork => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/iTunesArtwork
+[TRACE] COPYING CREATED FILE: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/Resources/ui/windows/menuOne.js => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/ui/windows/menuOne.js
+[TRACE] Generating Java Classes
+[DEBUG] Processing Android resource drawables
+[DEBUG] app stylesheet => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/gen/com/thewarpedcoder/TiCustomMenu/ApplicationStylesheet.java
+[DEBUG] copying app icon: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/TiCm_icon.png
+[DEBUG] generating theme.xml
+[DEBUG] found splash screen at /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/default.png
+[TRACE] Writing out AndroidManifest.xml
+[DEBUG] adding /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/gen/com/thewarpedcoder/TiCustomMenu/ApplicationStylesheet.java to javac build list
+[DEBUG] adding /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/gen/com/thewarpedcoder/TiCustomMenu/R.java to javac build list
+[DEBUG] adding /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/gen/com/thewarpedcoder/TiCustomMenu/TicustommenuActivity.java to javac build list
+[DEBUG] adding /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/gen/com/thewarpedcoder/TiCustomMenu/TicustommenuAppInfo.java to javac build list
+[DEBUG] adding /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/gen/com/thewarpedcoder/TiCustomMenu/TicustommenuApplication.java to javac build list
+[DEBUG] Building Java Sources: "/Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/gen/com/thewarpedcoder/TiCustomMenu/ApplicationStylesheet.java" "/Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/gen/com/thewarpedcoder/TiCustomMenu/R.java" "/Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/gen/com/thewarpedcoder/TiCustomMenu/TicustommenuActivity.java" "/Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/gen/com/thewarpedcoder/TiCustomMenu/TicustommenuAppInfo.java" "/Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/gen/com/thewarpedcoder/TiCustomMenu/TicustommenuApplication.java"
+[INFO] Waiting for SDCard to become available..
+[INFO] Compiling Android Resources... This could take some time
+[DEBUG] Android classes.dex built
+[DEBUG] creating unsigned apk: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/app-unsigned.apk
+[DEBUG] from resource zip => assets/Resources/control/controller.js
+[DEBUG] from resource zip => assets/Resources/ui/windows/menuOne.js
+[DEBUG] from resource zip => assets/Resources/TiCm_icon.png
+[DEBUG] from resource zip => assets/Resources/app.js
+[DEBUG] from resource zip => assets/Resources/default.png
+[DEBUG] from resource zip => assets/Resources/iTunesArtwork
+[DEBUG] from resource zip => assets/app.json
+[DEBUG] from resource zip => assets/index.json
+[DEBUG] from resource zip => assets/tiapp.xml
+[DEBUG] from resource zip => res/drawable/appicon.png
+[DEBUG] from resource zip => res/drawable/background.png
+[DEBUG] from resource zip => res/drawable/close.png
+[DEBUG] from resource zip => res/drawable/facebook_login.png
+[DEBUG] from resource zip => res/drawable/facebook_login_down.png
+[DEBUG] from resource zip => res/drawable/facebook_login_wide.png
+[DEBUG] from resource zip => res/drawable/facebook_login_wide_down.png
+[DEBUG] from resource zip => res/drawable/facebook_logout.png
+[DEBUG] from resource zip => res/drawable/facebook_logout_down.png
+[DEBUG] from resource zip => res/layout/titanium_tabgroup.xml
+[DEBUG] from resource zip => AndroidManifest.xml
+[DEBUG] from resource zip => resources.arsc
+[DEBUG] from resource zip => res/drawable-hdpi/close.png
+[DEBUG] from resource zip => res/drawable-ldpi/close.png
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/2.0.1.CR1/android/thirdparty.jar => org/apache/Commons-NOTICE.txt
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/2.0.1.CR1/android/thirdparty.jar => org/apache/HttpComponents-NOTICE.txt
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/2.0.1.CR1/android/thirdparty.jar => org/apache/mime4j-NOTICE.txt
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/2.0.1.CR1/android/modules/titanium-facebook.jar => ti/modules/titanium/facebook/LICENSE
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/2.0.1.CR1/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/binding.js
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/2.0.1.CR1/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/binding.min.js
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/2.0.1.CR1/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/json2.js
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/2.0.1.CR1/android/titanium.jar => org/appcelerator/titanium/build.properties
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/2.0.1.CR1/android/titanium.jar => org/appcelerator/titanium/res/drawable/background.png
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/2.0.1.CR1/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on.png
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/2.0.1.CR1/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_18.png
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/2.0.1.CR1/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_48.png
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/2.0.1.CR1/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_more.png
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/2.0.1.CR1/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_more_18.png
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/2.0.1.CR1/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_more_48.png
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/2.0.1.CR1/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_normal.9.png
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/2.0.1.CR1/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_pressed.9.png
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/2.0.1.CR1/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_selected.9.png
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/2.0.1.CR1/android/titanium.jar => org/appcelerator/titanium/res/drawable/default_icon.png
+[DEBUG] from JAR /Library/Application Support/Titanium/mobilesdk/osx/2.0.1.CR1/android/titanium.jar => org/appcelerator/titanium/res/drawable/photoDefault.png
+[DEBUG] installing native SDK libs
+[DEBUG] Waiting for device to be ready ...
+[TRACE] adb devices returned 2 devices/emulators
+[DEBUG] Device connected... (waited 0 seconds)
+[DEBUG] waited 0.014575 seconds on emulator to get ready
+[INFO] Installing application on emulator
+[INFO] Launching application ... TiCustomMenu
+[TRACE] Launch output: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.thewarpedcoder.TiCustomMenu/.TicustommenuActivity }
+
+[INFO] Deployed TiCustomMenu ... Application should be running.
+[INFO] Android Emulator has exited
