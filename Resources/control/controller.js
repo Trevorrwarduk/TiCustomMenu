@@ -44,6 +44,11 @@ var currWindow    =    null;
 var lastWindow    =    null;
 
 /*
+ * The required tools
+ */
+var toolsGlobal = require('/settings/global');
+
+/*
  * windowHandler
  * =============
  *
@@ -53,6 +58,9 @@ var lastWindow    =    null;
 function windowHandler(inParam) {"use strict";
     lastWindow    =    currWindow;
 
+    // Set the selected Window
+    toolsGlobal.value.CURRENTOPTION = inParam.OPTION;
+    
     currWindow    =    inParam.newWindow;
 
     currWindow.open();
@@ -77,7 +85,8 @@ function loadWindowOne(inParam) {"use strict";
     var windowOneReq    =    require('/ui/windows/windowOne');
 
     windowHandler({
-        newWindow :    windowOneReq.loadWindowOneDisplay()
+        newWindow :    windowOneReq.loadWindowOneDisplay(),
+        OPTION : toolsGlobal.value.OPTIONS.ONE
     });
 
     return;
@@ -94,7 +103,8 @@ function loadWindowTwo(inParam) {"use strict";
     var windowTwoReq    =    require('/ui/windows/windowTwo');
 
     windowHandler({
-        newWindow :    windowTwoReq.loadWindowTwoDisplay()
+        newWindow :    windowTwoReq.loadWindowTwoDisplay(),
+        OPTION : toolsGlobal.value.OPTIONS.TWO
     });
 
     return;
@@ -111,7 +121,8 @@ function loadWindowThree(inParam) {"use strict";
     var windowThreeReq    =    require('/ui/windows/windowThree');
 
     windowHandler({
-        newWindow :    windowThreeReq.loadWindowThreeDisplay()
+        newWindow :    windowThreeReq.loadWindowThreeDisplay(),
+        OPTION : toolsGlobal.value.OPTIONS.THREE
     });
 
     return;
@@ -128,7 +139,8 @@ function loadWindowFour(inParam) {"use strict";
     var windowFourReq    =    require('/ui/windows/windowFour');
 
     windowHandler({
-        newWindow :    windowFourReq.loadWindowFourDisplay()
+        newWindow :    windowFourReq.loadWindowFourDisplay(),
+        OPTION : toolsGlobal.value.OPTIONS.FOUR
     });
 
     return;
@@ -145,7 +157,8 @@ function loadWindowFive(inParam) {"use strict";
     var windowFiveReq    =    require('/ui/windows/windowFive');
 
     windowHandler({
-        newWindow :    windowFiveReq.loadWindowFiveDisplay()
+        newWindow :    windowFiveReq.loadWindowFiveDisplay(),
+        OPTION : toolsGlobal.value.OPTIONS.FIVE
     });
 
     return;
@@ -176,27 +189,30 @@ function startApp(inParam) {"use strict";
 
 function applicationHandler(inParam)
 {
-    switch(inParam.TYPE)
+    switch(inParam.OPTION)
     {
-        case 'opt1':
+        case toolsGlobal.value.OPTIONS.ONE:
              loadWindowOne(inParam.PARAMS);
              break;
-        case 'opt2':
+        case toolsGlobal.value.OPTIONS.TWO:
              loadWindowTwo(inParam.PARAMS);
              break;
-        case 'opt3':
+        case toolsGlobal.value.OPTIONS.THREE:
              loadWindowThree(inParam.PARAMS);
              break;
-        case 'opt4':
+        case toolsGlobal.value.OPTIONS.FOUR:
              loadWindowFour(inParam.PARAMS);
              break;
-        case 'opt5':
+        case toolsGlobal.value.OPTIONS.FIVE:
              loadWindowFive(inParam.PARAMS);
              break;
         default:
+             loadWindowOne(inParam.PARAMS);
              break;
     }
 }
+Ti.App.addEventListener('APPCONTROL', applicationHandler);
+
 /*
  * EXPORTS SECTION
  */

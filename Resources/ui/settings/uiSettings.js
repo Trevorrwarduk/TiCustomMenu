@@ -30,15 +30,18 @@ var settings    = {
         height :    '44dp',
         width :    '100%',
         backgroundColor :    '#ffffff',
-        top :    0
+        top :    0,
+        backgroundImage : '/assets/navBar/blackBackground.png'
     },
     tabMenu : {
         height :    '51dp',
         width :    '100%',
         backgroundColor :    '#000000',
+        backgroundImage : '/assets/menuBar/blackBackground.png',
         bottom :    0,
         options : {
-            count :    2,
+            iconSelected : '/assets/menuBar/menuIconOn.png',
+            iconNotSelected : '/assets/menuBar/menuIconOff.png',
         }
     },
     windows : {

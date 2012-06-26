@@ -30,10 +30,11 @@
  * Always require global settings reduced to name GS.
  */
 
-var GS    =    require('/ui/settings/globalSettings');
+var GS    =    require('/ui/settings/uiSettings');
 
 function loadNavBar(inParam) {
     var navBarView    =    Ti.UI.createView({
+        backgroundImage :    GS.settings.navBar.backgroundImage,
         backgroundColor :    GS.settings.navBar.backgroundColor,
         height :    GS.settings.navBar.height,
         width :    GS.settings.navBar.width,

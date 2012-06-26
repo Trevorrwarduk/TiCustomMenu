@@ -25,7 +25,7 @@
  * ===================================================================
  */
 
-var GS = require('/ui/settings/globalSettings');
+var GS = require('/ui/settings/uiSettings');
 
 function loadContentArea(inParam) {
     var contentAreaView    =    Ti.UI.createView({

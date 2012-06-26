@@ -14,7 +14,7 @@
  * in modules and there are no spurious scope variable issues.
  *
  * ===================================================================
- * Date created :                   30th May 2012
+ * Date created :                   1st July 2012
  *
  * Developer :                      Trevor Ward
  *
@@ -23,7 +23,7 @@
  *
  * Date :                  Developer:              Details:
  *
- * 30th May 2012           Trevor Ward             Initial code
+ * 1st July 2012           Trevor Ward             Initial code
  *
  * ===================================================================
  */
