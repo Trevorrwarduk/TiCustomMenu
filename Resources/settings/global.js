@@ -8,10 +8,10 @@
  *
  * It sets the parameters to be used throughout the application.
  *
- * It is a stand alone module used specifically for static values only.
+ * It is a stand alone module used specifically for global values only.
  *
  * ===================================================================
- * Date created :                   1st July 2012
+ * Date created :                   27th June 2012
  *
  * Developer :                      Trevor Ward
  *
@@ -20,7 +20,7 @@
  *
  * Date :                  Developer:              Details:
  *
- * 1st July 2012           Trevor Ward             Initial code
+ * 27th June 2012          Trevor Ward             Initial code
  *
  * ===================================================================
  */
@@ -35,7 +35,7 @@ var value    = {
         BACK :    'BACK'
     },
     CURRENTOPTION :    'OPT1',
-    BACKARRAY : []
+    BACKARRAY :    []
 }
 /*
  * EXPORTS SECTION

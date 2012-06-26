@@ -30,8 +30,8 @@
  * Always require global settings reduced to name GS.
  */
 
-var GS    =    require('/ui/settings/uiSettings');
-var toolsGlobal    =    require('/settings/global');
+var uiSettings    =    require('/settings/uiSettings');
+var settingsGlobal    =    require('/settings/global');
 
 /*
  * Five containers for the menu options so they can be maintained and controlled.
@@ -49,7 +49,7 @@ var optionFive    =    null;
  */
 
 function menuTouch(inParam) {
-    inParam.source.TEXT.color = "#ffffff";
+    inParam.source.TEXT.color = uiSettings.ui.tabMenu.font.touchColor;
 }
 
 /*
@@ -59,8 +59,6 @@ function menuTouch(inParam) {
  */
 
 function menuChange(inParam) {
-   // toolsGlobal.value.CURRENTOPTION = inParam.source.OPTION;
-
     Ti.App.fireEvent('APPCONTROL', {OPTION : inParam.source.OPTION});
 }
 
@@ -85,7 +83,7 @@ function createMenuItem(inParam) {"use strict";
         top : 10,
         height : 30,
         width : 60,
-        backgroundImage : (inParam.SELECTED) ? GS.settings.tabMenu.options.iconSelected : GS.settings.tabMenu.options.iconNotSelected
+        backgroundImage : (inParam.SELECTED) ? uiSettings.ui.tabMenu.options.iconSelected : uiSettings.ui.tabMenu.options.iconNotSelected
     })
     /* Put the text at the bottom small font and light color */
 
@@ -129,11 +127,11 @@ function createMenuItem(inParam) {"use strict";
 
 function loadTabMenu(inParam) {
     var tabMenuView    =    Ti.UI.createView({
-        backgroundColor :    GS.settings.tabMenu.backgroundColor,
-        backgroundImage :    GS.settings.tabMenu.backgroundImage,
-        height :    GS.settings.tabMenu.height,
-        width :    GS.settings.tabMenu.width,
-        bottom :    GS.settings.tabMenu.bottom,
+        backgroundColor :    uiSettings.ui.tabMenu.backgroundColor,
+        backgroundImage :    uiSettings.ui.tabMenu.backgroundImage,
+        height :    uiSettings.ui.tabMenu.height,
+        width :    uiSettings.ui.tabMenu.width,
+        bottom :    uiSettings.ui.tabMenu.bottom,
         layout :    'horizontal'
     });
 
@@ -148,28 +146,28 @@ function loadTabMenu(inParam) {
     /* Create the menu options */
     optionOne    =    createMenuItem({
         TEXT :    Ti.Locale.getString('menuItemOne'),
-        OPTION :    toolsGlobal.value.OPTIONS.ONE,
-        SELECTED : (toolsGlobal.value.CURRENTOPTION === toolsGlobal.value.OPTIONS.ONE) ? true : false
+        OPTION :    settingsGlobal.value.OPTIONS.ONE,
+        SELECTED : (settingsGlobal.value.CURRENTOPTION === settingsGlobal.value.OPTIONS.ONE) ? true : false
     });
     optionTwo    =    createMenuItem({
         TEXT :    Ti.Locale.getString('menuItemTwo'),
-        OPTION :    toolsGlobal.value.OPTIONS.TWO,
-        SELECTED : (toolsGlobal.value.CURRENTOPTION === toolsGlobal.value.OPTIONS.TWO) ? true : false
+        OPTION :    settingsGlobal.value.OPTIONS.TWO,
+        SELECTED : (settingsGlobal.value.CURRENTOPTION === settingsGlobal.value.OPTIONS.TWO) ? true : false
     });
     optionThree    =    createMenuItem({
         TEXT :    Ti.Locale.getString('menuItemThree'),
-        OPTION :    toolsGlobal.value.OPTIONS.THREE,
-        SELECTED : (toolsGlobal.value.CURRENTOPTION === toolsGlobal.value.OPTIONS.THREE) ? true : false
+        OPTION :    settingsGlobal.value.OPTIONS.THREE,
+        SELECTED : (settingsGlobal.value.CURRENTOPTION === settingsGlobal.value.OPTIONS.THREE) ? true : false
     });
     optionFour    =    createMenuItem({
         TEXT :    Ti.Locale.getString('menuItemFour'),
-        OPTION :    toolsGlobal.value.OPTIONS.FOUR,
-        SELECTED : (toolsGlobal.value.CURRENTOPTION === toolsGlobal.value.OPTIONS.FOUR) ? true : false
+        OPTION :    settingsGlobal.value.OPTIONS.FOUR,
+        SELECTED : (settingsGlobal.value.CURRENTOPTION === settingsGlobal.value.OPTIONS.FOUR) ? true : false
     });
     optionFive    =    createMenuItem({
         TEXT :    Ti.Locale.getString('menuItemFive'),
-        OPTION :    toolsGlobal.value.OPTIONS.FIVE,
-        SELECTED : (toolsGlobal.value.CURRENTOPTION === toolsGlobal.value.OPTIONS.FIVE) ? true : false
+        OPTION :    settingsGlobal.value.OPTIONS.FIVE,
+        SELECTED : (settingsGlobal.value.CURRENTOPTION === settingsGlobal.value.OPTIONS.FIVE) ? true : false
     });
 
     /* Add the menu options */

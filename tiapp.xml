@@ -8,7 +8,7 @@
         <target device="blackberry">false</target>
     </deployment-targets>
     <sdk-version>2.0.1.CR1</sdk-version>
-    <id>com.thewarpedcoder.TiCustomMenu</id>
+    <id>com.softlywired.TiCustomMenuDev</id>
     <name>TiCustomMenu</name>
     <version>1.0</version>
     <publisher>thewarpedcoder</publisher>
@@ -32,8 +32,6 @@
         <orientations device="ipad">
             <orientation>Ti.UI.PORTRAIT</orientation>
             <orientation>Ti.UI.UPSIDE_PORTRAIT</orientation>
-            <orientation>Ti.UI.LANDSCAPE_LEFT</orientation>
-            <orientation>Ti.UI.LANDSCAPE_RIGHT</orientation>
         </orientations>
     </iphone>
     <mobileweb>

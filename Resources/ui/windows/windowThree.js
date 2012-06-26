@@ -29,7 +29,7 @@
  *
  * ===================================================================
  */
-var toolsGlobal    =    require('/settings/global');
+var settingsGlobal    =    require('/settings/global');
 
 function loadWindowThreeDisplay(inParam) {"use strict";
 
@@ -44,7 +44,7 @@ function loadWindowThreeDisplay(inParam) {"use strict";
      * add the window event listeners for close and Android back
      */
     windowVar.addEventListener('android:back', function(e) {
-            Ti.App.fireEvent('APPCONTROL', {OPTION : toolsGlobal.value.OPTIONS.BACK});
+            Ti.App.fireEvent('APPCONTROL', {OPTION : settingsGlobal.value.OPTIONS.BACK});
     });
     windowVar.addEventListener('close', function(e) {
         windowVar    =    null;

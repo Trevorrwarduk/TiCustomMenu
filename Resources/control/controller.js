@@ -7,8 +7,8 @@
  * This commonJS module controls the whole application. All windows are opened and closed here,
  * all background setting and application level event listeners are also controlled here.
  *
- * It uses a custom back navigation which is coded to for both Android and IOS and as you will
- * seen in the screens the android hard back button is handled.
+ * It uses a custom back navigation which is coded for both Android and IOS and as you will
+ * see in the windows the android hard back button is handled.
  *
  * It also uses a custom open and close function which only closes the previous window after
  * the new window has opened.
@@ -17,12 +17,12 @@
  * is cleaned up.
  *
  * As you will see through the modules I have tried to use best practices and conform to a coding
- * standard of layout, comments and sections in each module. This again is only a suggested
+ * standard, comments and sections in each module. This again is only a suggested
  * way of doing this but it works and works well for me.
  *
  *
  * ===================================================================
- * Date created :                   1st July 2012
+ * Date created :                   27th June 2012
  *
  * Developer :                      Trevor Ward
  *
@@ -31,7 +31,7 @@
  *
  * Date :                  Developer:              Details:
  *
- * 1st July 2012           Trevor Ward             Initial code
+ * 27th June 2012          Trevor Ward             Initial code
  *
  * ===================================================================
  */
@@ -51,11 +51,17 @@ var backArray    =    [];
 /*
  * The required tools
  */
-var toolsGlobal    =    require('/settings/global');
+var settingsGlobal    =    require('/settings/global');
 
-function setValues(inParam) {
-    toolsGlobal.value.CURRENTOPTION    =    inParam.OPTION;
-    toolsGlobal.value.BACKARRAY.push(inParam.OPTION);
+/*
+ * setValues
+ * =========
+ *
+ * This function sets the values used for the menu selection and back handling.
+ */
+function setValues(inParam) {"use strict";
+    settingsGlobal.value.CURRENTOPTION    =    inParam.OPTION;
+    settingsGlobal.value.BACKARRAY.push(inParam.OPTION);
 
 }
 
@@ -68,10 +74,10 @@ function setValues(inParam) {
  *
  */
 function loadPreviousWindow(inParam) {"use strict";
-    var backLength    =    toolsGlobal.value.BACKARRAY.length;
+    var backLength    =    settingsGlobal.value.BACKARRAY.length;
 
     /* The only platform specific coding to handle closing the app if its android */
-    if (Ti.Platform.Android  &&  toolsGlobal.value.BACKARRAY.length  ===  1) {
+    if (Ti.Platform.Android  &&  settingsGlobal.value.BACKARRAY.length  ===  1) {
         var tmpWin    =    Ti.UI.createWindow({
             navBarHidden :    true,
             exitOnClose :    true
@@ -84,11 +90,9 @@ function loadPreviousWindow(inParam) {"use strict";
     }
     /* We have a screen to go back to */
     else if (backLength  >  1) {
-        var backOption    =    toolsGlobal.value.BACKARRAY[backLength  -  2];
-        // We want the previous element to the currently loaded screen.
+        var backOption    =    settingsGlobal.value.BACKARRAY[backLength  -  2];
 
-        toolsGlobal.value.BACKARRAY.length    =    backLength  -  2;
-        // clear the back screens no longer needed.
+        settingsGlobal.value.BACKARRAY.length    =    backLength  -  2;
 
         Ti.App.fireEvent('APPCONTROL', {
             OPTION :    backOption
@@ -128,7 +132,7 @@ function loadWindowOne(inParam) {"use strict";
     var windowOneReq    =    require('/ui/windows/windowOne');
 
     setValues({
-        OPTION :    toolsGlobal.value.OPTIONS.ONE
+        OPTION :    settingsGlobal.value.OPTIONS.ONE
     });
 
     windowHandler({
@@ -149,7 +153,7 @@ function loadWindowTwo(inParam) {"use strict";
     var windowTwoReq    =    require('/ui/windows/windowTwo');
 
     setValues({
-        OPTION :    toolsGlobal.value.OPTIONS.TWO
+        OPTION :    settingsGlobal.value.OPTIONS.TWO
     });
 
     windowHandler({
@@ -170,7 +174,7 @@ function loadWindowThree(inParam) {"use strict";
     var windowThreeReq    =    require('/ui/windows/windowThree');
 
     setValues({
-        OPTION :    toolsGlobal.value.OPTIONS.THREE
+        OPTION :    settingsGlobal.value.OPTIONS.THREE
     });
 
     windowHandler({
@@ -191,7 +195,7 @@ function loadWindowFour(inParam) {"use strict";
     var windowFourReq    =    require('/ui/windows/windowFour');
 
     setValues({
-        OPTION :    toolsGlobal.value.OPTIONS.FOUR
+        OPTION :    settingsGlobal.value.OPTIONS.FOUR
     });
 
     windowHandler({
@@ -212,7 +216,7 @@ function loadWindowFive(inParam) {"use strict";
     var windowFiveReq    =    require('/ui/windows/windowFive');
 
     setValues({
-        OPTION :    toolsGlobal.value.OPTIONS.FIVE
+        OPTION :    settingsGlobal.value.OPTIONS.FIVE
     });
 
     windowHandler({
@@ -247,22 +251,22 @@ function startApp(inParam) {"use strict";
 
 function applicationHandler(inParam) {
     switch(inParam.OPTION) {
-        case toolsGlobal.value.OPTIONS.ONE:
+        case settingsGlobal.value.OPTIONS.ONE:
             loadWindowOne(inParam.PARAMS);
             break;
-        case toolsGlobal.value.OPTIONS.TWO:
+        case settingsGlobal.value.OPTIONS.TWO:
             loadWindowTwo(inParam.PARAMS);
             break;
-        case toolsGlobal.value.OPTIONS.THREE:
+        case settingsGlobal.value.OPTIONS.THREE:
             loadWindowThree(inParam.PARAMS);
             break;
-        case toolsGlobal.value.OPTIONS.FOUR:
+        case settingsGlobal.value.OPTIONS.FOUR:
             loadWindowFour(inParam.PARAMS);
             break;
-        case toolsGlobal.value.OPTIONS.FIVE:
+        case settingsGlobal.value.OPTIONS.FIVE:
             loadWindowFive(inParam.PARAMS);
             break;
-        case toolsGlobal.value.OPTIONS.BACK:
+        case settingsGlobal.value.OPTIONS.BACK:
             loadPreviousWindow(inParam.PARAMS);
             break;
         default:

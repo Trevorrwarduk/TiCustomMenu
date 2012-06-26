@@ -30,18 +30,18 @@
  * Always require global settings reduced to name GS.
  */
 
-var GS    =    require('/ui/settings/uiSettings');
-var toolsGlobal    =    require('/settings/global');
+var uiSettings    =    require('/settings/uiSettings');
+var settingsGlobal    =    require('/settings/global');
 
 function navBarTouch(inParam) {
-    inParam.source.IMAGE.backgroundImage    =    GS.settings.navBar.back.backButtonOn;
-    inParam.source.TEXT.color    =    "#000000";
+    inParam.source.IMAGE.backgroundImage    =    uiSettings.ui.navBar.back.backButtonOn;
+    inParam.source.TEXT.color    =    uiSettings.ui.navBar.font.touchColor;
 
 }
 
 function navBarChange(inParam) {
-    inParam.source.IMAGE.backgroundImage    =    GS.settings.navBar.back.backButtonOff;
-    inParam.source.TEXT.color    =    "#ffffff";
+    inParam.source.IMAGE.backgroundImage    =    uiSettings.ui.navBar.back.backButtonOff;
+    inParam.source.TEXT.color    =    uiSettings.ui.navBar.font.buttonColor;
 
     Ti.App.fireEvent('APPCONTROL', {
         OPTION :    inParam.source.OPTION
@@ -50,11 +50,11 @@ function navBarChange(inParam) {
 
 function loadNavBar(inParam) {
     var navBarView    =    Ti.UI.createView({
-        backgroundImage :    GS.settings.navBar.backgroundImage,
-        backgroundColor :    GS.settings.navBar.backgroundColor,
-        height :    GS.settings.navBar.height,
-        width :    GS.settings.navBar.width,
-        top :    GS.settings.navBar.top
+        backgroundImage :    uiSettings.ui.navBar.backgroundImage,
+        backgroundColor :    uiSettings.ui.navBar.backgroundColor,
+        height :    uiSettings.ui.navBar.height,
+        width :    uiSettings.ui.navBar.width,
+        top :    uiSettings.ui.navBar.top
     });
 
     /* The title */
@@ -62,23 +62,23 @@ function loadNavBar(inParam) {
         left :    10,
         right :    10,
         height :    'auto',
-        textAlign :    'center',
-        color :    '#ffffff',
+        textAlign :    uiSettings.ui.navBar.font.titleAlign,
+        color :    uiSettings.ui.navBar.font.titleColor,
         font : {
-            fontSize :    22,
-            fontWeight :    'bold'
+            fontSize :    uiSettings.ui.navBar.font.titleSize,
+            fontWeight :    uiSettings.ui.navBar.font.titleWeight
         },
         text :    Ti.Locale.getString('appName')
     });
     navBarView.add(navBarTitle);
 
-    if (toolsGlobal.value.BACKARRAY.length  >  1) {
+    if (settingsGlobal.value.BACKARRAY.length  >  1) {
         /* The back button */
         var navBarBack    =    Ti.UI.createView({
             left :    10,
             height :    28,
             width :    57,
-            backgroundImage :    GS.settings.navBar.back.backButtonOff
+            backgroundImage :    uiSettings.ui.navBar.back.backButtonOff
         });
         var navBarBackText    =    Ti.UI.createLabel({
             top :    0,
@@ -86,11 +86,11 @@ function loadNavBar(inParam) {
             right :    0,
             bottom :    0,
             text :    Ti.Locale.getString('buttonBack'),
-            textAlign :    'center',
-            color :    '#ffffff',
+            textAlign :    uiSettings.ui.navBar.font.buttonAlign,
+            color :    uiSettings.ui.navBar.font.buttonColor,
             font : {
-                fontSize :    11,
-                fontWeight :    'bold'
+                fontSize :    uiSettings.ui.navBar.font.buttonSize,
+                fontWeight :    uiSettings.ui.navBar.font.buttonWeight
             }
         });
 
@@ -102,7 +102,7 @@ function loadNavBar(inParam) {
             right :    0,
             bottom :    0,
             backgroundColor :    'transparent',
-            OPTION :    toolsGlobal.value.OPTIONS.BACK,
+            OPTION :    settingsGlobal.value.OPTIONS.BACK,
             TEXT :    navBarBackText,
             IMAGE :    navBarBack
         });
