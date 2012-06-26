@@ -6,18 +6,18 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.020674 seconds on emulator to get ready
+[DEBUG] waited 0.018921 seconds on emulator to get ready
 [DEBUG] com.thewarpedcoder.TiCustomMenu installed? True
 [INFO] Fastdev server running, deploying in Fastdev mode
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
-[TRACE] COPYING MODIFIED FILE: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/Resources/ui/windows/windowOne.js => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/ui/windows/windowOne.js
+[TRACE] COPYING MODIFIED FILE: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/Resources/control/controller.js => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/control/controller.js
 [INFO] Tiapp.xml unchanged, skipping class generation
 [DEBUG] Processing Android resource drawables
 [INFO] Waiting for SDCard to become available..
 [INFO] Re-launching application ... TiCustomMenu
 [INFO] Launching application ... TiCustomMenu
 [TRACE] Launch output: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.thewarpedcoder.TiCustomMenu/.TicustommenuActivity }
-Warning: Activity not started, its current task has been brought to the front
 
+[INFO] Relaunched TiCustomMenu ... Application should be running.
 [INFO] Android Emulator has exited

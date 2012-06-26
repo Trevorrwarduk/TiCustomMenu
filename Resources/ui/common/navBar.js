@@ -34,13 +34,20 @@ var GS    =    require('/ui/settings/uiSettings');
 var toolsGlobal    =    require('/settings/global');
 
 function navBarTouch(inParam) {
-    inParam.source.IMAGE.image = GS.settings.navBar.back.backButtonOn;
-     inParam.source.TEXT.color = "#000000";
-   
+    inParam.source.IMAGE.backgroundImage    =    GS.settings.navBar.back.backButtonOn;
+    inParam.source.TEXT.color    =    "#000000";
+
 }
+
 function navBarChange(inParam) {
-    
+    inParam.source.IMAGE.backgroundImage    =    GS.settings.navBar.back.backButtonOff;
+    inParam.source.TEXT.color    =    "#ffffff";
+
+    Ti.App.fireEvent('APPCONTROL', {
+        OPTION :    inParam.source.OPTION
+    });
 }
+
 function loadNavBar(inParam) {
     var navBarView    =    Ti.UI.createView({
         backgroundImage :    GS.settings.navBar.backgroundImage,
@@ -65,45 +72,48 @@ function loadNavBar(inParam) {
     });
     navBarView.add(navBarTitle);
 
-    /* The back button */
-    var navBarBack    =    Ti.UI.createView({
-        left :    10,
-        height :    28,
-        width :    57,
-        backgroundImage :    GS.settings.navBar.back.backButtonOff
-    });
-    var navBarBackText = Ti.UI.createLabel({
-       top : 0,
-       left : 10,
-       right : 0,
-       bottom : 0,
-       text : Ti.Locale.getString('buttonBack'),
-       textAlign : 'center',
-       color : '#ffffff',
-       font : {fontSize : 11,
-               fontWeight : 'bold'} 
-    });
+    if (toolsGlobal.value.BACKARRAY.length  >  1) {
+        /* The back button */
+        var navBarBack    =    Ti.UI.createView({
+            left :    10,
+            height :    28,
+            width :    57,
+            backgroundImage :    GS.settings.navBar.back.backButtonOff
+        });
+        var navBarBackText    =    Ti.UI.createLabel({
+            top :    0,
+            left :    10,
+            right :    0,
+            bottom :    0,
+            text :    Ti.Locale.getString('buttonBack'),
+            textAlign :    'center',
+            color :    '#ffffff',
+            font : {
+                fontSize :    11,
+                fontWeight :    'bold'
+            }
+        });
 
-    /* Same trick as the menu to identify the area with a plain view over the top */
-   
-    var navBarButtonView = Ti.UI.createView({
-       top : 0,
-       left : 0,
-       right : 0,
-       bottom : 0,
-       backgroundColor : 'transparent',
-       OPTION :    toolsGlobal.value.OPTIONS.BACK,
-       TEXT : navBarBackText,
-       IMAGE :  navBarBack
-    });
-    /* The back button event listener */
-    navBarButtonView.addEventListener('touchstart', navBarTouch);
-    navBarButtonView.addEventListener('touchend', navBarChange);
+        /* Same trick as the menu to identify the area with a plain view over the top */
 
+        var navBarButtonView    =    Ti.UI.createView({
+            top :    0,
+            left :    0,
+            right :    0,
+            bottom :    0,
+            backgroundColor :    'transparent',
+            OPTION :    toolsGlobal.value.OPTIONS.BACK,
+            TEXT :    navBarBackText,
+            IMAGE :    navBarBack
+        });
+        /* The back button event listener */
+        navBarButtonView.addEventListener('touchstart', navBarTouch);
+        navBarButtonView.addEventListener('touchend', navBarChange);
 
-    navBarBack.add(navBarBackText);
-    navBarView.add(navBarBack);
-    navBarView.add(navBarButtonView);
+        navBarBack.add(navBarBackText);
+        navBarView.add(navBarBack);
+        navBarView.add(navBarButtonView);
+    }
 
     /*
      * Always return the view object to the calling window

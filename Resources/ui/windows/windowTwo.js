@@ -29,6 +29,7 @@
  *
  * ===================================================================
  */
+var toolsGlobal    =    require('/settings/global');
 
 function loadWindowTwoDisplay(inParam) {"use strict";
 
@@ -43,7 +44,7 @@ function loadWindowTwoDisplay(inParam) {"use strict";
      * add the window event listeners for close and Android back
      */
     windowVar.addEventListener('android:back', function(e) {
-        return;
+            Ti.App.fireEvent('APPCONTROL', {OPTION : toolsGlobal.value.OPTIONS.BACK});
     });
     windowVar.addEventListener('close', function(e) {
         windowVar    =    null;

@@ -34,7 +34,8 @@ var value    = {
         FIVE :    'OPT5',
         BACK :    'BACK'
     },
-    CURRENTOPTION :    'OPT1'
+    CURRENTOPTION :    'OPT1',
+    BACKARRAY : []
 }
 /*
  * EXPORTS SECTION

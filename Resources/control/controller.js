@@ -46,11 +46,55 @@ Titanium.UI.setBackgroundColor('#C3C3C3');
  */
 var currWindow    =    null;
 var lastWindow    =    null;
+var backArray    =    [];
 
 /*
  * The required tools
  */
-var toolsGlobal = require('/settings/global');
+var toolsGlobal    =    require('/settings/global');
+
+function setValues(inParam) {
+    toolsGlobal.value.CURRENTOPTION    =    inParam.OPTION;
+    toolsGlobal.value.BACKARRAY.push(inParam.OPTION);
+
+}
+
+/*
+ * loadPreviousWindow
+ * ==================
+ *
+ * This function handles the processing of the back button either the hard button on android
+ * or the soft button on the window navigation bar.
+ *
+ */
+function loadPreviousWindow(inParam) {"use strict";
+    var backLength    =    toolsGlobal.value.BACKARRAY.length;
+
+    /* The only platform specific coding to handle closing the app if its android */
+    if (Ti.Platform.Android  &&  toolsGlobal.value.BACKARRAY.length  ===  1) {
+        var tmpWin    =    Ti.UI.createWindow({
+            navBarHidden :    true,
+            exitOnClose :    true
+        });
+        tmpWin.addEventListener('open', function(e) {
+            tmpWin.close();
+        })
+        currWindow.close();
+        tmpWin.open();
+    }
+    /* We have a screen to go back to */
+    else if (backLength  >  1) {
+        var backOption    =    toolsGlobal.value.BACKARRAY[backLength  -  2];
+        // We want the previous element to the currently loaded screen.
+
+        toolsGlobal.value.BACKARRAY.length    =    backLength  -  2;
+        // clear the back screens no longer needed.
+
+        Ti.App.fireEvent('APPCONTROL', {
+            OPTION :    backOption
+        });
+    }
+}
 
 /*
  * windowHandler
@@ -68,10 +112,8 @@ function windowHandler(inParam) {"use strict";
 
     if (lastWindow) {
         lastWindow.close();
+        lastWindow    =    null;
     }
-
-    lastWindow    =    null;
-
     return;
 }
 
@@ -85,8 +127,10 @@ function windowHandler(inParam) {"use strict";
 function loadWindowOne(inParam) {"use strict";
     var windowOneReq    =    require('/ui/windows/windowOne');
 
-    toolsGlobal.value.CURRENTOPTION = toolsGlobal.value.OPTIONS.ONE;
-    
+    setValues({
+        OPTION :    toolsGlobal.value.OPTIONS.ONE
+    });
+
     windowHandler({
         newWindow :    windowOneReq.loadWindowOneDisplay()
     });
@@ -104,8 +148,10 @@ function loadWindowOne(inParam) {"use strict";
 function loadWindowTwo(inParam) {"use strict";
     var windowTwoReq    =    require('/ui/windows/windowTwo');
 
-    toolsGlobal.value.CURRENTOPTION = toolsGlobal.value.OPTIONS.TWO;
-    
+    setValues({
+        OPTION :    toolsGlobal.value.OPTIONS.TWO
+    });
+
     windowHandler({
         newWindow :    windowTwoReq.loadWindowTwoDisplay()
     });
@@ -123,8 +169,10 @@ function loadWindowTwo(inParam) {"use strict";
 function loadWindowThree(inParam) {"use strict";
     var windowThreeReq    =    require('/ui/windows/windowThree');
 
-    toolsGlobal.value.CURRENTOPTION = toolsGlobal.value.OPTIONS.THREE;
-    
+    setValues({
+        OPTION :    toolsGlobal.value.OPTIONS.THREE
+    });
+
     windowHandler({
         newWindow :    windowThreeReq.loadWindowThreeDisplay()
     });
@@ -142,8 +190,10 @@ function loadWindowThree(inParam) {"use strict";
 function loadWindowFour(inParam) {"use strict";
     var windowFourReq    =    require('/ui/windows/windowFour');
 
-    toolsGlobal.value.CURRENTOPTION = toolsGlobal.value.OPTIONS.FOUR;
-    
+    setValues({
+        OPTION :    toolsGlobal.value.OPTIONS.FOUR
+    });
+
     windowHandler({
         newWindow :    windowFourReq.loadWindowFourDisplay()
     });
@@ -161,8 +211,10 @@ function loadWindowFour(inParam) {"use strict";
 function loadWindowFive(inParam) {"use strict";
     var windowFiveReq    =    require('/ui/windows/windowFive');
 
-    toolsGlobal.value.CURRENTOPTION = toolsGlobal.value.OPTIONS.FIVE;
-    
+    setValues({
+        OPTION :    toolsGlobal.value.OPTIONS.FIVE
+    });
+
     windowHandler({
         newWindow :    windowFiveReq.loadWindowFiveDisplay()
     });
@@ -185,38 +237,40 @@ function startApp(inParam) {"use strict";
     return;
 }
 
-/* 
- * Application control section. 
- * 
+/*
+ * Application control section.
+ *
  * This section handles the application event listener which receives fire
  * events from the application itself (In this case the menu), and processes
  * the application flow.
  */
 
-function applicationHandler(inParam)
-{
-    switch(inParam.OPTION)
-    {
+function applicationHandler(inParam) {
+    switch(inParam.OPTION) {
         case toolsGlobal.value.OPTIONS.ONE:
-             loadWindowOne(inParam.PARAMS);
-             break;
+            loadWindowOne(inParam.PARAMS);
+            break;
         case toolsGlobal.value.OPTIONS.TWO:
-             loadWindowTwo(inParam.PARAMS);
-             break;
+            loadWindowTwo(inParam.PARAMS);
+            break;
         case toolsGlobal.value.OPTIONS.THREE:
-             loadWindowThree(inParam.PARAMS);
-             break;
+            loadWindowThree(inParam.PARAMS);
+            break;
         case toolsGlobal.value.OPTIONS.FOUR:
-             loadWindowFour(inParam.PARAMS);
-             break;
+            loadWindowFour(inParam.PARAMS);
+            break;
         case toolsGlobal.value.OPTIONS.FIVE:
-             loadWindowFive(inParam.PARAMS);
-             break;
+            loadWindowFive(inParam.PARAMS);
+            break;
+        case toolsGlobal.value.OPTIONS.BACK:
+            loadPreviousWindow(inParam.PARAMS);
+            break;
         default:
-             loadWindowOne(inParam.PARAMS);
-             break;
+            loadWindowOne(inParam.PARAMS);
+            break;
     }
 }
+
 Ti.App.addEventListener('APPCONTROL', applicationHandler);
 
 /*

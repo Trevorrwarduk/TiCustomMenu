@@ -59,7 +59,7 @@ function menuTouch(inParam) {
  */
 
 function menuChange(inParam) {
-    toolsGlobal.value.CURRENTOPTION = inParam.source.OPTION;
+   // toolsGlobal.value.CURRENTOPTION = inParam.source.OPTION;
 
     Ti.App.fireEvent('APPCONTROL', {OPTION : inParam.source.OPTION});
 }
