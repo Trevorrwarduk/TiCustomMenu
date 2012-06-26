@@ -31,7 +31,8 @@ var value    = {
         TWO :    'OPT2',
         THREE :    'OPT3',
         FOUR :    'OPT4',
-        FIVE :    'OPT5'
+        FIVE :    'OPT5',
+        BACK :    'BACK'
     },
     CURRENTOPTION :    'OPT1'
 }

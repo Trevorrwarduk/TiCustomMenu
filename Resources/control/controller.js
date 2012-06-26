@@ -36,6 +36,10 @@
  * ===================================================================
  */
 
+/* Set the default application color */
+
+Titanium.UI.setBackgroundColor('#C3C3C3');
+
 /*
  * A couple of parameters to keep the details of the current opened and previous
  * windows for opening and closing
@@ -58,9 +62,6 @@ var toolsGlobal = require('/settings/global');
 function windowHandler(inParam) {"use strict";
     lastWindow    =    currWindow;
 
-    // Set the selected Window
-    toolsGlobal.value.CURRENTOPTION = inParam.OPTION;
-    
     currWindow    =    inParam.newWindow;
 
     currWindow.open();
@@ -84,9 +85,10 @@ function windowHandler(inParam) {"use strict";
 function loadWindowOne(inParam) {"use strict";
     var windowOneReq    =    require('/ui/windows/windowOne');
 
+    toolsGlobal.value.CURRENTOPTION = toolsGlobal.value.OPTIONS.ONE;
+    
     windowHandler({
-        newWindow :    windowOneReq.loadWindowOneDisplay(),
-        OPTION : toolsGlobal.value.OPTIONS.ONE
+        newWindow :    windowOneReq.loadWindowOneDisplay()
     });
 
     return;
@@ -102,9 +104,10 @@ function loadWindowOne(inParam) {"use strict";
 function loadWindowTwo(inParam) {"use strict";
     var windowTwoReq    =    require('/ui/windows/windowTwo');
 
+    toolsGlobal.value.CURRENTOPTION = toolsGlobal.value.OPTIONS.TWO;
+    
     windowHandler({
-        newWindow :    windowTwoReq.loadWindowTwoDisplay(),
-        OPTION : toolsGlobal.value.OPTIONS.TWO
+        newWindow :    windowTwoReq.loadWindowTwoDisplay()
     });
 
     return;
@@ -120,9 +123,10 @@ function loadWindowTwo(inParam) {"use strict";
 function loadWindowThree(inParam) {"use strict";
     var windowThreeReq    =    require('/ui/windows/windowThree');
 
+    toolsGlobal.value.CURRENTOPTION = toolsGlobal.value.OPTIONS.THREE;
+    
     windowHandler({
-        newWindow :    windowThreeReq.loadWindowThreeDisplay(),
-        OPTION : toolsGlobal.value.OPTIONS.THREE
+        newWindow :    windowThreeReq.loadWindowThreeDisplay()
     });
 
     return;
@@ -138,9 +142,10 @@ function loadWindowThree(inParam) {"use strict";
 function loadWindowFour(inParam) {"use strict";
     var windowFourReq    =    require('/ui/windows/windowFour');
 
+    toolsGlobal.value.CURRENTOPTION = toolsGlobal.value.OPTIONS.FOUR;
+    
     windowHandler({
-        newWindow :    windowFourReq.loadWindowFourDisplay(),
-        OPTION : toolsGlobal.value.OPTIONS.FOUR
+        newWindow :    windowFourReq.loadWindowFourDisplay()
     });
 
     return;
@@ -156,9 +161,10 @@ function loadWindowFour(inParam) {"use strict";
 function loadWindowFive(inParam) {"use strict";
     var windowFiveReq    =    require('/ui/windows/windowFive');
 
+    toolsGlobal.value.CURRENTOPTION = toolsGlobal.value.OPTIONS.FIVE;
+    
     windowHandler({
-        newWindow :    windowFiveReq.loadWindowFiveDisplay(),
-        OPTION : toolsGlobal.value.OPTIONS.FIVE
+        newWindow :    windowFiveReq.loadWindowFiveDisplay()
     });
 
     return;

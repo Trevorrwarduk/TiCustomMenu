@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
-    <string name="app_name">TiCustomMenu</string>
+    <string name="appName">TiCustomMenu</string>
 
     <!-- Window One Text -->
     <string name="oneLabel">Window One</string>
@@ -18,8 +18,7 @@
     <string name="fiveLabel">Window Five</string>
 
     <!-- Button text -->
-    <string name="butt_continue">Continue</string>
-    <string name="butt_close">Close</string>
+    <string name="buttonBack">BACK</string>
 
     <!-- Menu Bar Text -->
     <string name="menuItemOne">One</string>
@@ -27,8 +26,5 @@
     <string name="menuItemThree">Three</string>
     <string name="menuItemFour">Four</string>
     <string name="menuItemFive">Five</string>
-
-    <!-- Error Messages -->
-    <string name="E0001">Error 1</string>
 
 </resources>

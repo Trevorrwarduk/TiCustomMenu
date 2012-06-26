@@ -59,9 +59,6 @@ function menuTouch(inParam) {
  */
 
 function menuChange(inParam) {
-    /* Fire the controller event */
-   
-    // Set the selected Window
     toolsGlobal.value.CURRENTOPTION = inParam.source.OPTION;
 
     Ti.App.fireEvent('APPCONTROL', {OPTION : inParam.source.OPTION});
@@ -120,15 +117,14 @@ function createMenuItem(inParam) {"use strict";
     });
     /* Add the event listener to action the controller and set the selected */
 
-    menuItem.addEventListener('touchstart', menuTouch);
-    menuItem.addEventListener('touchend', menuChange);
+    buttonView.addEventListener('touchstart', menuTouch);
+    buttonView.addEventListener('touchend', menuChange);
 
     menuButton.add(menuText);
     menuItem.add(menuButton);
     menuItem.add(buttonView);
 
     return menuItem;
-
 }
 
 function loadTabMenu(inParam) {

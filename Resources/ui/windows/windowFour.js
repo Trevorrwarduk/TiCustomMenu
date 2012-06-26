@@ -89,7 +89,8 @@ function loadWindowFourDisplay(inParam) {"use strict";
         right :    10,
         height :    75,
         text :    Ti.Locale.getString('fourLabel'),
-        textAlign :    'center'
+        textAlign :    'center',
+        color : '#ffffff'
     });
 
     // Add the components to the contentArea

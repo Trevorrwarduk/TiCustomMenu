@@ -29,9 +29,9 @@ var GS = require('/ui/settings/uiSettings');
 
 function loadContentArea(inParam) {
     var contentAreaView    =    Ti.UI.createView({
-        backgroundColor :    GS.settings.content.backgroundColor,
+        backgroundColor :    GS.settings.contentArea.backgroundColor,
         top :    GS.settings.navBar.height,
-        width :    GS.settings.content.width,
+        width :    GS.settings.contentArea.width,
         bottom : GS.settings.tabMenu.height
     });
     /*

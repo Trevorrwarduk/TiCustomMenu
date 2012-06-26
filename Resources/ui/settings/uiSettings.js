@@ -31,7 +31,11 @@ var settings    = {
         width :    '100%',
         backgroundColor :    '#ffffff',
         top :    0,
-        backgroundImage : '/assets/navBar/blackBackground.png'
+        backgroundImage : '/assets/navBar/blackBackground.png',
+        back : {
+            backButtonOff : '/assets/buttons/backButtonBlackOff.png',
+            backButtonOn : '/assets/buttons/backButtonBlackOn.png'
+        }
     },
     tabMenu : {
         height :    '51dp',
@@ -44,20 +48,8 @@ var settings    = {
             iconNotSelected : '/assets/menuBar/menuIconOff.png',
         }
     },
-    windows : {
-        one : {
-            req :    '/ui/windows/windowOne',
-            title :    'Window One',
-            back :    false
-        },
-        two : {
-            req :    '/ui/windows/windowTwo',
-            title :    'Window Two',
-            back :    false
-        }
-    },
-    content : {
-        backgroundColor :    'transparent',
+    contentArea : {
+        backgroundColor :    '#C3C3C3',
         width :    '100%'
     }
 }
