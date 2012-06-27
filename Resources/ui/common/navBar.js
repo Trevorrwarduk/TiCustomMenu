@@ -2,7 +2,7 @@
  * TiCustomMenu
  *
  * navBar.js
- * =============
+ * =========
  *
  * This commonJS module creates the navigation bar. It is used on every window created
  * for the group.
@@ -10,7 +10,7 @@
  *
  *
  * ===================================================================
- * Date created :                   1st July 2012
+ * Date created :                   27th June 2012
  *
  * Developer :                      Trevor Ward
  *
@@ -19,7 +19,7 @@
  *
  * Date :                  Developer:              Details:
  *
- * 1st July 2012           Trevor Ward             Initial code
+ * 27th June 2012          Trevor Ward             Initial code
  *
  * ===================================================================
  */
@@ -75,9 +75,9 @@ function loadNavBar(inParam) {
     if (settingsGlobal.value.BACKARRAY.length  >  1) {
         /* The back button */
         var navBarBack    =    Ti.UI.createView({
-            left :    10,
-            height :    28,
-            width :    57,
+            left :    uiSettings.ui.navBar.back.left,
+            height :    uiSettings.ui.navBar.back.height,
+            width :    uiSettings.ui.navBar.back.width,
             backgroundImage :    uiSettings.ui.navBar.back.backButtonOff
         });
         var navBarBackText    =    Ti.UI.createLabel({

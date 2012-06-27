@@ -10,7 +10,7 @@
  *
  *
  * ===================================================================
- * Date created :                   1st July 2012
+ * Date created :                   27th June 2012
  *
  * Developer :                      Trevor Ward
  *
@@ -19,7 +19,7 @@
  *
  * Date :                  Developer:              Details:
  *
- * 1st July 2012           Trevor Ward             Initial code
+ * 27th June 2012          Trevor Ward             Initial code
  *
  * ===================================================================
  */
@@ -49,7 +49,7 @@ var optionFive    =    null;
  */
 
 function menuTouch(inParam) {
-    inParam.source.TEXT.color = uiSettings.ui.tabMenu.font.touchColor;
+    inParam.source.TEXT.color    =    uiSettings.ui.tabMenu.font.touchColor;
 }
 
 /*
@@ -59,7 +59,9 @@ function menuTouch(inParam) {
  */
 
 function menuChange(inParam) {
-    Ti.App.fireEvent('APPCONTROL', {OPTION : inParam.source.OPTION});
+    Ti.App.fireEvent('APPCONTROL', {
+        OPTION :    inParam.source.OPTION
+    });
 }
 
 /*
@@ -72,18 +74,18 @@ function menuChange(inParam) {
 function createMenuItem(inParam) {"use strict";
     var menuItem    =    Ti.UI.createView({
         top :    0,
-        bottom :   0,
+        bottom :    0,
         left :    0,
         width :    '20%',
-        backgroundColor : 'transparent'
+        backgroundColor :    'transparent'
     });
 
     /* Put the icon on the button */
-    var menuButton = Ti.UI.createView({
-        top : 10,
-        height : 30,
-        width : 60,
-        backgroundImage : (inParam.SELECTED) ? uiSettings.ui.tabMenu.options.iconSelected : uiSettings.ui.tabMenu.options.iconNotSelected
+    var menuButton    =    Ti.UI.createView({
+        top :    uiSettings.ui.tabMenu.button.top,
+        height :    uiSettings.ui.tabMenu.button.height,
+        width :    uiSettings.ui.tabMenu.button.width,
+        backgroundImage :    (inParam.SELECTED)    ?    uiSettings.ui.tabMenu.options.iconSelected    :    uiSettings.ui.tabMenu.options.iconNotSelected
     })
     /* Put the text at the bottom small font and light color */
 
@@ -92,26 +94,26 @@ function createMenuItem(inParam) {"use strict";
         left :    0,
         right :    0,
         height :    'auto',
-        color :    (inParam.SELECTED) ? "#f3f3f3" : "#919191",
-        textAlign :    'center',
+        color :    (inParam.SELECTED)    ?    uiSettings.ui.tabMenu.font.selColor    :    uiSettings.ui.tabMenu.font.baseColor,
+        textAlign :    uiSettings.ui.tabMenu.font.textAlign,
         font : {
-            fontSize :    12,
-            fontWeight :    'bold'
+            fontSize :    uiSettings.ui.tabMenu.font.textSize,
+            fontWeight :    uiSettings.ui.tabMenu.font.textWeight
         }
     });
-    
+
     /* Put a view over the top of the main container so it will always be the source
      * for the event listener
      */
-     
-    var buttonView = Ti.UI.createView({
-       top : 0,
-       left : 0,
-       right : 0,
-       bottom : 0,
-       backgroundColor : 'transparent',
-       OPTION :    inParam.OPTION,
-       TEXT : menuText 
+
+    var buttonView    =    Ti.UI.createView({
+        top :    0,
+        left :    0,
+        right :    0,
+        bottom :    0,
+        backgroundColor :    'transparent',
+        OPTION :    inParam.OPTION,
+        TEXT :    menuText
     });
     /* Add the event listener to action the controller and set the selected */
 
@@ -147,27 +149,27 @@ function loadTabMenu(inParam) {
     optionOne    =    createMenuItem({
         TEXT :    Ti.Locale.getString('menuItemOne'),
         OPTION :    settingsGlobal.value.OPTIONS.ONE,
-        SELECTED : (settingsGlobal.value.CURRENTOPTION === settingsGlobal.value.OPTIONS.ONE) ? true : false
+        SELECTED :    (settingsGlobal.value.CURRENTOPTION  ===  settingsGlobal.value.OPTIONS.ONE)    ?    true    :    false
     });
     optionTwo    =    createMenuItem({
         TEXT :    Ti.Locale.getString('menuItemTwo'),
         OPTION :    settingsGlobal.value.OPTIONS.TWO,
-        SELECTED : (settingsGlobal.value.CURRENTOPTION === settingsGlobal.value.OPTIONS.TWO) ? true : false
+        SELECTED :    (settingsGlobal.value.CURRENTOPTION  ===  settingsGlobal.value.OPTIONS.TWO)    ?    true    :    false
     });
     optionThree    =    createMenuItem({
         TEXT :    Ti.Locale.getString('menuItemThree'),
         OPTION :    settingsGlobal.value.OPTIONS.THREE,
-        SELECTED : (settingsGlobal.value.CURRENTOPTION === settingsGlobal.value.OPTIONS.THREE) ? true : false
+        SELECTED :    (settingsGlobal.value.CURRENTOPTION  ===  settingsGlobal.value.OPTIONS.THREE)    ?    true    :    false
     });
     optionFour    =    createMenuItem({
         TEXT :    Ti.Locale.getString('menuItemFour'),
         OPTION :    settingsGlobal.value.OPTIONS.FOUR,
-        SELECTED : (settingsGlobal.value.CURRENTOPTION === settingsGlobal.value.OPTIONS.FOUR) ? true : false
+        SELECTED :    (settingsGlobal.value.CURRENTOPTION  ===  settingsGlobal.value.OPTIONS.FOUR)    ?    true    :    false
     });
     optionFive    =    createMenuItem({
         TEXT :    Ti.Locale.getString('menuItemFive'),
         OPTION :    settingsGlobal.value.OPTIONS.FIVE,
-        SELECTED : (settingsGlobal.value.CURRENTOPTION === settingsGlobal.value.OPTIONS.FIVE) ? true : false
+        SELECTED :    (settingsGlobal.value.CURRENTOPTION  ===  settingsGlobal.value.OPTIONS.FIVE)    ?    true    :    false
     });
 
     /* Add the menu options */

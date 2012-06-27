@@ -20,7 +20,7 @@
  *
  * Date :                  Developer:              Details:
  *
- * 27th June 2012           Trevor Ward             Initial code
+ * 27th June 2012          Trevor Ward             Initial code
  *
  * ===================================================================
  */

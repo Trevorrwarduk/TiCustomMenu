@@ -34,18 +34,21 @@ var ui    = {
         backgroundImage :    '/assets/navBar/blackBackground.png',
         back : {
             backButtonOff :    '/assets/buttons/backButtonBlackOff.png',
-            backButtonOn :    '/assets/buttons/backButtonBlackOn.png'
+            backButtonOn :    '/assets/buttons/backButtonBlackOn.png',
+            left :    '10dp',
+            height :    '28dp',
+            width :    '57dp'
         },
         font : {
-          titleColor : '#ffffff',
-          titleSize : 22,
-          titleWeight : 'bold',
-          titleAlign : 'center',  
-          buttonColor : '#ffffff',
-          buttonSize : 11,
-          buttonWeight : 'bold'  ,
-          buttonAlign : 'center',
-          touchColor : '#000000'  
+            titleColor :    '#ffffff',
+            titleSize :    '22dp',
+            titleWeight :    'bold',
+            titleAlign :    'center',
+            buttonColor :    '#ffffff',
+            buttonSize :    '11dp',
+            buttonWeight :    'bold',
+            buttonAlign :    'center',
+            touchColor :    '#000000'
         }
     },
     tabMenu : {
@@ -59,12 +62,31 @@ var ui    = {
             iconNotSelected :    '/assets/menuBar/menuIconOff.png',
         },
         font : {
-          touchColor : '#ffffff'  
+            touchColor :    '#ffffff',
+            textSize :    '12dp',
+            textWeight :    'bold',
+            textAlign :    'center',
+            baseColor :    '#919191',
+            selColor :    '#f3f3f3'
+        },
+        button : {
+            height :    '30dp',
+            width :    '60dp',
+            top :    '10dp'
         }
     },
     contentArea : {
         backgroundColor :    '#C3C3C3',
         width :    '100%'
+    },
+    windows : {
+        backgroundColor :    '#C3C3C3',
+        textFont : {
+            color :    '#ffffff',
+            size :    '22dp',
+            weight :    'bold',
+            align :    'center'
+        },
     }
 }
 /*

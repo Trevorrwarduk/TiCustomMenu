@@ -4,7 +4,7 @@
  * windowFour.js
  * =============
  *
- * This commonJS module loads the initial window. It sets all the display
+ * This commonJS module loads the fourth window. It sets all the display
  * criteria and uses common tools to put the navigation bar and menu on the screen.
  *
  * The actual opening and closing of the window is done by the controller
@@ -16,7 +16,7 @@
  *
  *
  * ===================================================================
- * Date created :                   1st July 2012
+ * Date created :                   27th June 2012
  *
  * Developer :                      Trevor Ward
  *
@@ -25,16 +25,17 @@
  *
  * Date :                  Developer:              Details:
  *
- * 1st July 2012           Trevor Ward             Initial code
+ * 27th June 2012          Trevor Ward             Initial code
  *
  * ===================================================================
  */
+var uiSettings    =    require('/settings/uiSettings');
 var settingsGlobal    =    require('/settings/global');
 
 function loadWindowFourDisplay(inParam) {"use strict";
 
     var windowVar    =    Ti.UI.createWindow({
-        backgroundColor :    "C1C1C1",
+        backgroundColor :    uiSettings.ui.windows.backgroundColor,
         navBarHidden :    true,
         orientationModes :    [Ti.UI.PORTRAIT]
     });
@@ -44,7 +45,9 @@ function loadWindowFourDisplay(inParam) {"use strict";
      * add the window event listeners for close and Android back
      */
     windowVar.addEventListener('android:back', function(e) {
-            Ti.App.fireEvent('APPCONTROL', {OPTION : settingsGlobal.value.OPTIONS.BACK});
+        Ti.App.fireEvent('APPCONTROL', {
+            OPTION :    settingsGlobal.value.OPTIONS.BACK
+        });
     });
     windowVar.addEventListener('close', function(e) {
         windowVar    =    null;
@@ -84,18 +87,22 @@ function loadWindowFourDisplay(inParam) {"use strict";
      * Add all the content to the contentArea only and nothing on the nav bar or the tab menu will be overwritten.
      */
 
-    var aLabel    =    Ti.UI.createLabel({
+    var windowText    =    Ti.UI.createLabel({
         top :    100,
         left :    10,
         right :    10,
         height :    75,
         text :    Ti.Locale.getString('fourLabel'),
-        textAlign :    'center',
-        color : '#ffffff'
+        textAlign :    uiSettings.ui.windows.textFont.align,
+        color :    uiSettings.ui.windows.textFont.color,
+        font : {
+            fontSize :    uiSettings.ui.windows.textFont.size,
+            fontWeight :    uiSettings.ui.windows.textFont.weight
+        }
     });
 
     // Add the components to the contentArea
-    contentArea.add(aLabel);
+    contentArea.add(windowText);
 
     // Add the contentArea
     windowVar.add(contentArea);
