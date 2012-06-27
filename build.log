@@ -5,53 +5,23 @@ Logfile initialized
 [INFO] Titanium SDK version: 2.0.1 (04/10/12 13:17 0234887)
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 2 devices/emulators
-[TRACE] adb devices returned 2 devices/emulators
-[TRACE] adb devices returned 2 devices/emulators
-[TRACE] adb devices returned 2 devices/emulators
-[TRACE] adb devices returned 2 devices/emulators
-[TRACE] adb devices returned 2 devices/emulators
-[DEBUG] Device connected... (waited 25 seconds)
-[DEBUG] waited 25.091513 seconds on emulator to get ready
-[INFO] Waiting for the Android Emulator to become available
-[DEBUG] com.softlywired.TiCustomMenuDev installed? False
+[DEBUG] Device connected... (waited 0 seconds)
+[DEBUG] waited 0.014184 seconds on emulator to get ready
+[DEBUG] com.softlywired.TiCustomMenuDev installed? True
 [INFO] Fastdev server running, deploying in Fastdev mode
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
-[INFO] Detected change in tiapp.xml, or assets deleted. Forcing full re-build...
-[TRACE] COPYING CREATED FILE: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/Resources/android/default.png => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/default.png
-[TRACE] COPYING CREATED FILE: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/Resources/android/TiCm_icon.png => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/TiCm_icon.png
-[TRACE] COPYING CREATED FILE: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/Resources/app.js => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/app.js
-[TRACE] COPYING CREATED FILE: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/Resources/assets/buttons/backButtonBlackOff.png => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/assets/buttons/backButtonBlackOff.png
-[TRACE] COPYING CREATED FILE: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/Resources/assets/buttons/backButtonBlackOn.png => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/assets/buttons/backButtonBlackOn.png
-[TRACE] COPYING CREATED FILE: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/Resources/assets/menuBar/blackBackground.png => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/assets/menuBar/blackBackground.png
-[TRACE] COPYING CREATED FILE: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/Resources/assets/menuBar/menuIconOff.png => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/assets/menuBar/menuIconOff.png
-[TRACE] COPYING CREATED FILE: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/Resources/assets/menuBar/menuIconOn.png => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/assets/menuBar/menuIconOn.png
-[TRACE] COPYING CREATED FILE: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/Resources/assets/navBar/blackBackground.png => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/assets/navBar/blackBackground.png
-[TRACE] COPYING CREATED FILE: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/Resources/control/controller.js => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/control/controller.js
-[TRACE] COPYING CREATED FILE: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/Resources/iTunesArtwork => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/iTunesArtwork
-[TRACE] COPYING CREATED FILE: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/Resources/settings/global.js => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/settings/global.js
-[TRACE] COPYING CREATED FILE: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/Resources/settings/uiSettings.js => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/settings/uiSettings.js
-[TRACE] COPYING CREATED FILE: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/Resources/ui/common/contentArea.js => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/ui/common/contentArea.js
-[TRACE] COPYING CREATED FILE: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/Resources/ui/common/navBar.js => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/ui/common/navBar.js
-[TRACE] COPYING CREATED FILE: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/Resources/ui/common/tabMenu.js => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/ui/common/tabMenu.js
-[TRACE] COPYING CREATED FILE: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/Resources/ui/windows/windowFive.js => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/ui/windows/windowFive.js
-[TRACE] COPYING CREATED FILE: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/Resources/ui/windows/windowFour.js => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/ui/windows/windowFour.js
-[TRACE] COPYING CREATED FILE: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/Resources/ui/windows/windowOne.js => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/ui/windows/windowOne.js
-[TRACE] COPYING CREATED FILE: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/Resources/ui/windows/windowThree.js => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/ui/windows/windowThree.js
-[TRACE] COPYING CREATED FILE: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/Resources/ui/windows/windowTwo.js => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/ui/windows/windowTwo.js
 [TRACE] Generating Java Classes
 [DEBUG] Processing Android resource drawables
-[DEBUG] app stylesheet => /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/gen/com/softlywired/TiCustomMenuDev/ApplicationStylesheet.java
 [DEBUG] copying app icon: /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/TiCm_icon.png
 [DEBUG] generating theme.xml
 [DEBUG] found splash screen at /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/bin/assets/Resources/default.png
 [TRACE] Writing out AndroidManifest.xml
-[DEBUG] adding /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/gen/com/softlywired/TiCustomMenuDev/ApplicationStylesheet.java to javac build list
 [DEBUG] adding /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/gen/com/softlywired/TiCustomMenuDev/R.java to javac build list
 [DEBUG] adding /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/gen/com/softlywired/TiCustomMenuDev/TicustommenuActivity.java to javac build list
 [DEBUG] adding /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/gen/com/softlywired/TiCustomMenuDev/TicustommenuAppInfo.java to javac build list
 [DEBUG] adding /Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/gen/com/softlywired/TiCustomMenuDev/TicustommenuApplication.java to javac build list
-[DEBUG] Building Java Sources: "/Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/gen/com/softlywired/TiCustomMenuDev/ApplicationStylesheet.java" "/Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/gen/com/softlywired/TiCustomMenuDev/R.java" "/Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/gen/com/softlywired/TiCustomMenuDev/TicustommenuActivity.java" "/Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/gen/com/softlywired/TiCustomMenuDev/TicustommenuAppInfo.java" "/Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/gen/com/softlywired/TiCustomMenuDev/TicustommenuApplication.java"
+[DEBUG] Building Java Sources: "/Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/gen/com/softlywired/TiCustomMenuDev/R.java" "/Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/gen/com/softlywired/TiCustomMenuDev/TicustommenuActivity.java" "/Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/gen/com/softlywired/TiCustomMenuDev/TicustommenuAppInfo.java" "/Users/thewarpedcoder/Documents/Titanium Studio Workspace/TiCustomMenu/build/android/gen/com/softlywired/TiCustomMenuDev/TicustommenuApplication.java"
 [INFO] Waiting for SDCard to become available..
 [INFO] Compiling Android Resources... This could take some time
 [DEBUG] Android classes.dex built
@@ -118,9 +88,10 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 2 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.013895 seconds on emulator to get ready
+[DEBUG] waited 0.013961 seconds on emulator to get ready
 [INFO] Installing application on emulator
 [INFO] Launching application ... TiCustomMenu
 [TRACE] Launch output: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.softlywired.TiCustomMenuDev/.TicustommenuActivity }
 
 [INFO] Deployed TiCustomMenu ... Application should be running.
+[INFO] Android Emulator has exited
