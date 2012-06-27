@@ -30,8 +30,13 @@
  * Always require global settings reduced to name GS.
  */
 
-var uiSettings    =    require('/settings/uiSettings');
 var settingsGlobal    =    require('/settings/global');
+var uiSettings    =    require('/settings/'  +  settingsGlobal.value.COLORSCHEME);
+
+function updateRequired() {
+    settingsGlobal    =    require('/settings/global');
+    uiSettings    =    require('/settings/'  +  settingsGlobal.value.COLORSCHEME);
+}
 
 function navBarTouch(inParam) {
     inParam.source.IMAGE.backgroundImage    =    uiSettings.ui.navBar.back.backButtonOn;
@@ -49,6 +54,8 @@ function navBarChange(inParam) {
 }
 
 function loadNavBar(inParam) {
+    updateRequired();
+
     var navBarView    =    Ti.UI.createView({
         backgroundImage :    uiSettings.ui.navBar.backgroundImage,
         backgroundColor :    uiSettings.ui.navBar.backgroundColor,

@@ -25,9 +25,18 @@
  * ===================================================================
  */
 
-var uiSettings    =    require('/settings/uiSettings');
+var settingsGlobal    =    require('/settings/global');
+var uiSettings    =    require('/settings/'  +  settingsGlobal.value.COLORSCHEME);
+
+function updateRequired() {
+    settingsGlobal    =    require('/settings/global');
+    uiSettings    =    require('/settings/'  +  settingsGlobal.value.COLORSCHEME);
+}
 
 function loadContentArea(inParam) {
+
+    updateRequired();
+
     var contentAreaView    =    Ti.UI.createView({
         backgroundColor :    uiSettings.ui.contentArea.backgroundColor,
         top :    uiSettings.ui.navBar.height,

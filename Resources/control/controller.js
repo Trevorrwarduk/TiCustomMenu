@@ -60,9 +60,16 @@ var settingsGlobal    =    require('/settings/global');
  * This function sets the values used for the menu selection and back handling.
  */
 function setValues(inParam) {"use strict";
-    settingsGlobal.value.CURRENTOPTION    =    inParam.OPTION;
-    settingsGlobal.value.BACKARRAY.push(inParam.OPTION);
 
+    /*
+     * This test is to allow for changing colors where the screen is reloaded. So only if the previous screen
+     * was not the same as the new screen will it add to the back functionality
+     *
+     */
+    if (settingsGlobal.value.BACKARRAY[settingsGlobal.value.BACKARRAY.length  -  1]  !=  inParam.OPTION) {
+        settingsGlobal.value.CURRENTOPTION    =    inParam.OPTION;
+        settingsGlobal.value.BACKARRAY.push(inParam.OPTION);
+    }
 }
 
 /*

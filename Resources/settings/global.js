@@ -35,7 +35,17 @@ var value    = {
         BACK :    'BACK'
     },
     CURRENTOPTION :    'OPT1',
-    BACKARRAY :    []
+    BACKARRAY :    [],
+    COLORSCHEMES : {
+        BLACK :    'uiSettings',
+        BLUE :    'uiSettingsBlue',
+        GREEN :    'uiSettingsGreen',
+        GREY :    'uiSettingsGrey',
+        ORANGE :    'uiSettingsOrange',
+        RED :    'uiSettingsRed',
+        YELLOW :    'uiSettingsYellow'
+    },
+    COLORSCHEME :    'uiSettings'
 }
 /*
  * EXPORTS SECTION

@@ -31,10 +31,10 @@ var ui    = {
         width :    '100%',
         backgroundColor :    '#ffffff',
         top :    0,
-        backgroundImage :    '/assets/navBar/backgroundBlack.png',
+        backgroundImage :    '/assets/navBar/backgroundGreen.png',
         back : {
-            backButtonOff :    '/assets/buttons/backButtonBlackOff.png',
-            backButtonOn :    '/assets/buttons/backButtonBlackOn.png',
+            backButtonOff :    '/assets/buttons/backButtonGreenOff.png',
+            backButtonOn :    '/assets/buttons/backButtonGreenOn.png',
             left :    '10dp',
             height :    '28dp',
             width :    '57dp'
@@ -55,11 +55,11 @@ var ui    = {
         height :    '51dp',
         width :    '100%',
         backgroundColor :    '#000000',
-        backgroundImage :    '/assets/menuBar/backgroundBlack.png',
+        backgroundImage :    '/assets/menuBar/backgroundGreen.png',
         bottom :    0,
         options : {
-            iconSelected :    '/assets/menuBar/menuIconOnBlack.png',
-            iconNotSelected :    '/assets/menuBar/menuIconOffBlack.png',
+            iconSelected :    '/assets/menuBar/menuIconOnGreen.png',
+            iconNotSelected :    '/assets/menuBar/menuIconOffGreen.png',
         },
         font : {
             touchColor :    '#ffffff',
@@ -76,11 +76,11 @@ var ui    = {
         }
     },
     contentArea : {
-        backgroundColor :    '#444444',
+        backgroundColor :    '#2fa667',
         width :    '100%'
     },
     windows : {
-        backgroundColor :    '#444444',
+        backgroundColor :    '#2fa667',
         textFont : {
             color :    '#ffffff',
             size :    '22dp',
@@ -88,13 +88,14 @@ var ui    = {
             align :    'center'
         },
     },
-
-    selColor : { backgroundColor : '#444444',
-        borderColor : '#ffffff',
-        font : { color : '#ffffff',
-            size : '11dp',
-            weight : 'bold',
-            align : 'center'
+    selColor : {
+        backgroundColor :    '#2fa667',
+        borderColor :    '#ffffff',
+        font : {
+            color :    '#ffffff',
+            size :    '11dp',
+            weight :    'bold',
+            align :    'center'
         }
     }
 }

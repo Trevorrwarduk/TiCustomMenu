@@ -29,10 +29,17 @@
  *
  * ===================================================================
  */
-var uiSettings    =    require('/settings/uiSettings');
 var settingsGlobal    =    require('/settings/global');
+var uiSettings    =    require('/settings/'  +  settingsGlobal.value.COLORSCHEME);
+
+function updateRequired() {
+    settingsGlobal    =    require('/settings/global');
+    uiSettings    =    require('/settings/'  +  settingsGlobal.value.COLORSCHEME);
+}
 
 function loadWindowOneDisplay(inParam) {"use strict";
+
+    updateRequired();
 
     var windowVar    =    Ti.UI.createWindow({
         backgroundColor :    uiSettings.ui.windows.backgroundColor,
@@ -88,10 +95,10 @@ function loadWindowOneDisplay(inParam) {"use strict";
      */
 
     var windowText    =    Ti.UI.createLabel({
-        top :    100,
+        top :    20,
         left :    10,
         right :    10,
-        height :    75,
+        height :    40,
         text :    Ti.Locale.getString('oneLabel'),
         textAlign :    uiSettings.ui.windows.textFont.align,
         color :    uiSettings.ui.windows.textFont.color,
@@ -103,6 +110,13 @@ function loadWindowOneDisplay(inParam) {"use strict";
 
     // Add the components to the contentArea
     contentArea.add(windowText);
+
+    /*
+     * Require the Select Color Option and display on the screen
+     */
+    var selColor    =    require('/ui/common/selectColor').loadSelectColor();
+
+    contentArea.add(selColor);
 
     // Add the contentArea
     windowVar.add(contentArea);

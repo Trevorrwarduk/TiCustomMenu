@@ -12,6 +12,12 @@ to get you started, and you may have your own company or individual guidelines y
 Also I use JSLint validation all through the application so functions appear in the right order
 in modules and there are no spurious scope variable issues.
 
+This application uses different ui settings files to allow you to switch between color schemes.
+It uses buttons on the screen to enable this but you will hopefully see how quickly it would be
+to use a permament setting to allow your users to select their own.
+
+Also the different color images are provided so you can just setup one for your application.
+
 ________________________________________________________________________________________________
 
 A big thank you goes out to Peter Lounton from Spring Designs http://www.springdesigns.uk.com

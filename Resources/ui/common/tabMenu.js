@@ -30,8 +30,8 @@
  * Always require global settings reduced to name GS.
  */
 
-var uiSettings    =    require('/settings/uiSettings');
 var settingsGlobal    =    require('/settings/global');
+var uiSettings    =    require('/settings/'  +  settingsGlobal.value.COLORSCHEME);
 
 /*
  * Five containers for the menu options so they can be maintained and controlled.
@@ -42,6 +42,11 @@ var optionTwo    =    null;
 var optionThree    =    null;
 var optionFour    =    null;
 var optionFive    =    null;
+
+function updateRequired() {
+    settingsGlobal    =    require('/settings/global');
+    uiSettings    =    require('/settings/'  +  settingsGlobal.value.COLORSCHEME);
+}
 
 /*
  * menuTouch
@@ -128,6 +133,8 @@ function createMenuItem(inParam) {"use strict";
 }
 
 function loadTabMenu(inParam) {
+    updateRequired();
+
     var tabMenuView    =    Ti.UI.createView({
         backgroundColor :    uiSettings.ui.tabMenu.backgroundColor,
         backgroundImage :    uiSettings.ui.tabMenu.backgroundImage,
