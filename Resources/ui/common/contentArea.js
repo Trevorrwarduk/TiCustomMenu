@@ -43,9 +43,8 @@ function loadContentArea(inParam) {
         width :    uiSettings.ui.contentArea.width,
         bottom :    uiSettings.ui.tabMenu.height
     });
-    /*
-     * Always return the view object to the calling window
-     */
+    // Always return the view object to the calling window
+
     return contentAreaView;
 }
 

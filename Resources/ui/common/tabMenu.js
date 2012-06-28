@@ -85,14 +85,14 @@ function createMenuItem(inParam) {"use strict";
         backgroundColor :    'transparent'
     });
 
-    /* Put the icon on the button */
+    // Put the icon on the button
     var menuButton    =    Ti.UI.createView({
         top :    uiSettings.ui.tabMenu.button.top,
         height :    uiSettings.ui.tabMenu.button.height,
         width :    uiSettings.ui.tabMenu.button.width,
         backgroundImage :    (inParam.SELECTED)    ?    uiSettings.ui.tabMenu.options.iconSelected    :    uiSettings.ui.tabMenu.options.iconNotSelected
     })
-    /* Put the text at the bottom small font and light color */
+    // Put the text at the bottom small font and light color
 
     var menuText    =    Ti.UI.createLabel({
         text :    inParam.TEXT,
@@ -107,9 +107,8 @@ function createMenuItem(inParam) {"use strict";
         }
     });
 
-    /* Put a view over the top of the main container so it will always be the source
-     * for the event listener
-     */
+    // Put a view over the top of the main container so it will always be the source
+    // for the event listener
 
     var buttonView    =    Ti.UI.createView({
         top :    0,
@@ -120,7 +119,7 @@ function createMenuItem(inParam) {"use strict";
         OPTION :    inParam.OPTION,
         TEXT :    menuText
     });
-    /* Add the event listener to action the controller and set the selected */
+    // Add the event listener to action the controller and set the selected
 
     buttonView.addEventListener('touchstart', menuTouch);
     buttonView.addEventListener('touchend', menuChange);
@@ -144,15 +143,12 @@ function loadTabMenu(inParam) {
         layout :    'horizontal'
     });
 
-    /*
-     * Build each menu option
-     *
-     * In this example wee build 5. You can see how to modify this down if needed.
-     * Really do not go over 5 as that is the ideal size for phone menus.
-     *
-     */
+    // Build each menu option
 
-    /* Create the menu options */
+    // In this example wee build 5. You can see how to modify this down if needed.
+    // Really do not go over 5 as that is the ideal size for phone menus.
+
+    // Create the menu options
     optionOne    =    createMenuItem({
         TEXT :    Ti.Locale.getString('menuItemOne'),
         OPTION :    settingsGlobal.value.OPTIONS.ONE,
@@ -179,16 +175,14 @@ function loadTabMenu(inParam) {
         SELECTED :    (settingsGlobal.value.CURRENTOPTION  ===  settingsGlobal.value.OPTIONS.FIVE)    ?    true    :    false
     });
 
-    /* Add the menu options */
+    // Add the menu options
     tabMenuView.add(optionOne);
     tabMenuView.add(optionTwo);
     tabMenuView.add(optionThree);
     tabMenuView.add(optionFour);
     tabMenuView.add(optionFive);
 
-    /*
-     * Always return the view object to the calling window
-     */
+    // Always return the view object to the calling window
     return tabMenuView;
 }
 

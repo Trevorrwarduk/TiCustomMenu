@@ -7,10 +7,10 @@
         <target device="android">true</target>
         <target device="blackberry">false</target>
     </deployment-targets>
-    <sdk-version>2.0.1.CR1</sdk-version>
+    <sdk-version>2.0.2.GA</sdk-version>
     <id>com.softlywired.TiCustomMenuDev</id>
     <name>TiCustomMenu</name>
-    <version>1.0</version>
+    <version>1.1</version>
     <publisher>thewarpedcoder</publisher>
     <url>http://www.thewarpedcoder.net</url>
     <description>not specified</description>

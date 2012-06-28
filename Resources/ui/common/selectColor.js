@@ -111,9 +111,8 @@ function loadSelectColor(inParam) {"use strict";
     selColorView.add(option5);
     selColorView.add(option6);
     selColorView.add(option7);
-    /*
-     * Always return the object to the controller
-     */
+
+    // Always return the object to the controller
     return selColorView;
 }
 

@@ -83,7 +83,7 @@ function setValues(inParam) {"use strict";
 function loadPreviousWindow(inParam) {"use strict";
     var backLength    =    settingsGlobal.value.BACKARRAY.length;
 
-    /* The only platform specific coding to handle closing the app if its android */
+    // The only platform specific coding to handle closing the app if its android
     if (Ti.Platform.Android  &&  settingsGlobal.value.BACKARRAY.length  ===  1) {
         var tmpWin    =    Ti.UI.createWindow({
             navBarHidden :    true,
@@ -95,7 +95,7 @@ function loadPreviousWindow(inParam) {"use strict";
         currWindow.close();
         tmpWin.open();
     }
-    /* We have a screen to go back to */
+    // We have a screen to go back to
     else if (backLength  >  1) {
         var backOption    =    settingsGlobal.value.BACKARRAY[backLength  -  2];
 

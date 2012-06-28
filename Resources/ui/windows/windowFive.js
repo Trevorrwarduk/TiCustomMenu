@@ -48,9 +48,7 @@ function loadWindowFiveDisplay(inParam) {"use strict";
     });
     windowVar.orientationModes    =    [Ti.UI.PORTRAIT];
 
-    /*
-     * add the window event listeners for close and Android back
-     */
+    // add the window event listeners for close and Android back
     windowVar.addEventListener('android:back', function(e) {
         Ti.App.fireEvent('APPCONTROL', {
             OPTION :    settingsGlobal.value.OPTIONS.BACK
@@ -60,39 +58,26 @@ function loadWindowFiveDisplay(inParam) {"use strict";
         windowVar    =    null;
         return;
     });
-    /*
-     * The screen is split into three ...
-     *
-     * The top navigation bar
-     *
-     * The main screen area
-     *
-     * The tab menu bar
-     */
+    // The screen is split into three ...
+    // The top navigation bar
+    // The main screen area
+    // The tab menu bar
 
-    /*
-     * Require the nav bar and display on the screen
-     */
+    // Require the nav bar and display on the screen
     var navBar    =    require('/ui/common/navBar').loadNavBar();
 
     windowVar.add(navBar);
-    /*
-     * Require the tab menu bar and display on the screen
-     */
+
+    // Require the tab menu bar and display on the screen
     var tabMenu    =    require('/ui/common/tabMenu').loadTabMenu();
 
     windowVar.add(tabMenu);
 
-    /*
-     * Require the base screen area and display on the screen
-     */
+    // Require the base screen area and display on the screen
     var contentArea    =    require('/ui/common/contentArea').loadContentArea();
 
-    /*
-     * Build you specific window UI section here ... You can even include sub files to require depending on platform type.
-     *
-     * Add all the content to the contentArea only and nothing on the nav bar or the tab menu will be overwritten.
-     */
+    // Build you specific window UI section here ... You can even include sub files to require depending on platform type.
+    // Add all the content to the contentArea only and nothing on the nav bar or the tab menu will be overwritten.
 
     var windowText    =    Ti.UI.createLabel({
         top :    20,
@@ -111,9 +96,7 @@ function loadWindowFiveDisplay(inParam) {"use strict";
     // Add the components to the contentArea
     contentArea.add(windowText);
 
-    /*
-     * Require the Select Color Option and display on the screen
-     */
+    // Require the Select Color Option and display on the screen
     var selColor    =    require('/ui/common/selectColor').loadSelectColor();
 
     contentArea.add(selColor);
@@ -121,9 +104,7 @@ function loadWindowFiveDisplay(inParam) {"use strict";
     // Add the contentArea
     windowVar.add(contentArea);
 
-    /*
-     * Always return the window object to the controller
-     */
+    // Always return the window object to the controller
     return windowVar;
 }
 

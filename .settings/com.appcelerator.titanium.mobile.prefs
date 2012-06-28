@@ -1,6 +1,6 @@
 android/alias=TiCustomMenu
-android/keystore=/Users/thewarpedcoder/Dropbox/trw_Folder/Softly Wired/certificates/android_distribution/TiCustomMenu
-android/output_location=/Users/thewarpedcoder/Dropbox/trw_Folder/Softly Wired/Android Distribution/Applications
-android/recent_output=/Users/thewarpedcoder/Dropbox/trw_Folder/Softly Wired/Android Distribution/Applications,
+android/keystore=/Users/thewarpedcoder/Dropbox/trw_Folder/Softly Wired/openSource Projects/TiCommonMenu/Android/TiCustomMenu
+android/output_location=/Users/thewarpedcoder/Dropbox/trw_Folder/Softly Wired/openSource Projects/TiCommonMenu/Android
+android/recent_output=/Users/thewarpedcoder/Dropbox/trw_Folder/Softly Wired/openSource Projects/TiCommonMenu/Android,/Users/thewarpedcoder/Dropbox/trw_Folder/Softly Wired/Android Distribution/Applications
 android/sdk=Android 2.3.3
 eclipse.preferences.version=1

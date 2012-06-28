@@ -64,7 +64,7 @@ function loadNavBar(inParam) {
         top :    uiSettings.ui.navBar.top
     });
 
-    /* The title */
+    // The title
     var navBarTitle    =    Ti.UI.createLabel({
         left :    10,
         right :    10,
@@ -80,7 +80,7 @@ function loadNavBar(inParam) {
     navBarView.add(navBarTitle);
 
     if (settingsGlobal.value.BACKARRAY.length  >  1) {
-        /* The back button */
+        // The back button
         var navBarBack    =    Ti.UI.createView({
             left :    uiSettings.ui.navBar.back.left,
             height :    uiSettings.ui.navBar.back.height,
@@ -101,7 +101,7 @@ function loadNavBar(inParam) {
             }
         });
 
-        /* Same trick as the menu to identify the area with a plain view over the top */
+        // Same trick as the menu to identify the area with a plain view over the top
 
         var navBarButtonView    =    Ti.UI.createView({
             top :    0,
@@ -113,7 +113,7 @@ function loadNavBar(inParam) {
             TEXT :    navBarBackText,
             IMAGE :    navBarBack
         });
-        /* The back button event listener */
+        // The back button event listener
         navBarButtonView.addEventListener('touchstart', navBarTouch);
         navBarButtonView.addEventListener('touchend', navBarChange);
 
@@ -121,10 +121,7 @@ function loadNavBar(inParam) {
         navBarView.add(navBarBack);
         navBarView.add(navBarButtonView);
     }
-
-    /*
-     * Always return the view object to the calling window
-     */
+    // Always return the view object to the calling window
     return navBarView;
 }
 
