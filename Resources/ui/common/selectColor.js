@@ -28,12 +28,12 @@
 var settingsGlobal    =    require('/settings/global');
 var uiSettings    =    require('/settings/'  +  settingsGlobal.value.COLORSCHEME);
 
-function updateRequired() {
+function updateRequired() {'use strict';
     settingsGlobal    =    require('/settings/global');
     uiSettings    =    require('/settings/'  +  settingsGlobal.value.COLORSCHEME);
 }
 
-function buildOption(inParam) {
+function buildOption(inParam) {'use strict';
     var option    =    Ti.UI.createLabel({
         top :    10,
         left :    0,
@@ -48,7 +48,7 @@ function buildOption(inParam) {
         }
     });
     option.addEventListener('touchstart', function(e) {
-        option.color    =    '#ff0000'
+        option.color    =    '#ff0000';
     });
     option.addEventListener('touchend', function(e) {
         settingsGlobal.value.COLORSCHEME    =    inParam.SCHEME;

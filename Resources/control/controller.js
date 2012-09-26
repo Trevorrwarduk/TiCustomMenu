@@ -66,7 +66,7 @@ function setValues(inParam) {"use strict";
      * was not the same as the new screen will it add to the back functionality
      *
      */
-    if (settingsGlobal.value.BACKARRAY[settingsGlobal.value.BACKARRAY.length  -  1]  !=  inParam.OPTION) {
+    if (settingsGlobal.value.BACKARRAY[settingsGlobal.value.BACKARRAY.length  -  1]  !==  inParam.OPTION) {
         settingsGlobal.value.CURRENTOPTION    =    inParam.OPTION;
         settingsGlobal.value.BACKARRAY.push(inParam.OPTION);
     }
@@ -91,7 +91,7 @@ function loadPreviousWindow(inParam) {"use strict";
         });
         tmpWin.addEventListener('open', function(e) {
             tmpWin.close();
-        })
+        });
         currWindow.close();
         tmpWin.open();
     }
@@ -256,7 +256,7 @@ function startApp(inParam) {"use strict";
  * the application flow.
  */
 
-function applicationHandler(inParam) {
+function applicationHandler(inParam) {'use strict';
     switch(inParam.OPTION) {
         case settingsGlobal.value.OPTIONS.ONE:
             loadWindowOne(inParam.PARAMS);

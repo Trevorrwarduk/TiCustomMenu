@@ -33,18 +33,18 @@
 var settingsGlobal    =    require('/settings/global');
 var uiSettings    =    require('/settings/'  +  settingsGlobal.value.COLORSCHEME);
 
-function updateRequired() {
+function updateRequired() {'use strict';
     settingsGlobal    =    require('/settings/global');
     uiSettings    =    require('/settings/'  +  settingsGlobal.value.COLORSCHEME);
 }
 
-function navBarTouch(inParam) {
+function navBarTouch(inParam) {'use strict';
     inParam.source.IMAGE.backgroundImage    =    uiSettings.ui.navBar.back.backButtonOn;
     inParam.source.TEXT.color    =    uiSettings.ui.navBar.font.touchColor;
 
 }
 
-function navBarChange(inParam) {
+function navBarChange(inParam) {'use strict';
     inParam.source.IMAGE.backgroundImage    =    uiSettings.ui.navBar.back.backButtonOff;
     inParam.source.TEXT.color    =    uiSettings.ui.navBar.font.buttonColor;
 
@@ -53,7 +53,7 @@ function navBarChange(inParam) {
     });
 }
 
-function loadNavBar(inParam) {
+function loadNavBar(inParam) {'use strict';
     updateRequired();
 
     var navBarView    =    Ti.UI.createView({

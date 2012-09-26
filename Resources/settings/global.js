@@ -46,7 +46,7 @@ var value    = {
         YELLOW :    'uiSettingsYellow'
     },
     COLORSCHEME :    'uiSettings'
-}
+};
 /*
  * EXPORTS SECTION
  */

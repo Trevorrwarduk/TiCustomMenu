@@ -59,7 +59,7 @@ var ui    = {
         bottom :    0,
         options : {
             iconSelected :    '/assets/menuBar/menuIconOnGrey.png',
-            iconNotSelected :    '/assets/menuBar/menuIconOffGrey.png',
+            iconNotSelected :    '/assets/menuBar/menuIconOffGrey.png'
         },
         font : {
             touchColor :    '#ffffff',
@@ -86,7 +86,7 @@ var ui    = {
             size :    '22dp',
             weight :    'bold',
             align :    'center'
-        },
+        }
     },
     selColor : {
         backgroundColor :    '#979797',
@@ -98,7 +98,7 @@ var ui    = {
             align :    'center'
         }
     }
-}
+};
 /*
  * EXPORTS SECTION
  */
