@@ -43,7 +43,7 @@ var optionThree    =    null;
 var optionFour    =    null;
 var optionFive    =    null;
 
-function updateRequired() {
+function updateRequired() {'use strict';
     settingsGlobal    =    require('/settings/global');
     uiSettings    =    require('/settings/'  +  settingsGlobal.value.COLORSCHEME);
 }
@@ -53,7 +53,7 @@ function updateRequired() {
  * =========
  */
 
-function menuTouch(inParam) {
+function menuTouch(inParam) {'use strict';
     inParam.source.TEXT.color    =    uiSettings.ui.tabMenu.font.touchColor;
 }
 
@@ -63,7 +63,7 @@ function menuTouch(inParam) {
  *
  */
 
-function menuChange(inParam) {
+function menuChange(inParam) {'use strict';
     Ti.App.fireEvent('APPCONTROL', {
         OPTION :    inParam.source.OPTION
     });
@@ -91,7 +91,7 @@ function createMenuItem(inParam) {"use strict";
         height :    uiSettings.ui.tabMenu.button.height,
         width :    uiSettings.ui.tabMenu.button.width,
         backgroundImage :    (inParam.SELECTED)    ?    uiSettings.ui.tabMenu.options.iconSelected    :    uiSettings.ui.tabMenu.options.iconNotSelected
-    })
+    });
     // Put the text at the bottom small font and light color
 
     var menuText    =    Ti.UI.createLabel({
@@ -131,7 +131,7 @@ function createMenuItem(inParam) {"use strict";
     return menuItem;
 }
 
-function loadTabMenu(inParam) {
+function loadTabMenu(inParam) {'use strict';
     updateRequired();
 
     var tabMenuView    =    Ti.UI.createView({

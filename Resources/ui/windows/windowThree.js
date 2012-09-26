@@ -32,7 +32,7 @@
 var settingsGlobal    =    require('/settings/global');
 var uiSettings    =    require('/settings/'  +  settingsGlobal.value.COLORSCHEME);
 
-function updateRequired() {
+function updateRequired() {'use strict';
     settingsGlobal    =    require('/settings/global');
     uiSettings    =    require('/settings/'  +  settingsGlobal.value.COLORSCHEME);
 }
